@@ -22,6 +22,21 @@ namespace Application_test_repo.Containers
 
         }
 
+     
+        public async Task<List<MedicalModal>> GetAllMedical()
+        {
+            List<MedicalModal> _response = new List<MedicalModal>();
+
+            var _data = await this._dbContext.TblMedicals.ToListAsync();
+
+            if (_data != null)
+            {
+                _response = this.mapper.Map<List<TblMedical>, List<MedicalModal>>(_data);
+            }
+            return _response;
+
+        }
+
         public async Task<APIResponse> CreateMedical(MedicalModal data)
         {
             APIResponse response = new APIResponse();
@@ -43,20 +58,6 @@ namespace Application_test_repo.Containers
 
             }
             return response;
-        }
-
-        public async Task<List<MedicalModal>> GetAllMedical()
-        {
-            List<MedicalModal> _response = new List<MedicalModal>();
-
-            var _data = await this._dbContext.TblMedicals.ToListAsync();
-
-            if (_data != null)
-            {
-                _response = this.mapper.Map<List<TblMedical>, List<MedicalModal>>(_data);
-            }
-            return _response;
-
         }
 
         public async Task<MedicalModal> GetMedicalById(int medical_id)
