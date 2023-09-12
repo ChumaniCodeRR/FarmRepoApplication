@@ -10,6 +10,7 @@ namespace Application_test_repo.Containers
 {
     public class MedicalServices : IMedicalService
     {
+        //testt
         private readonly Test_DBContext _dbContext;
         private readonly IMapper mapper;
         private readonly ILogger<MedicalServices> _logger;
