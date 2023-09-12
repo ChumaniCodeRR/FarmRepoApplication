@@ -27,6 +27,13 @@ namespace Application_test_repo.Helper
                 .ForMember(dest => dest.AnimalId,
                 opts => opts.MapFrom(src => src.AnimalId)).ReverseMap();
 
+            CreateMap<TblCrop, CropModal>()
+                .ForMember(icon => icon.CropId,
+                opts => opts.MapFrom(src => src.CropId)).ReverseMap();
+
+            CreateMap<TblSeed, SeedModal>()
+                .ForMember(icon => icon.SeedId,
+                opts => opts.MapFrom(src => src.SeedId)).ReverseMap();
         }
     }
 }

@@ -26,6 +26,9 @@ builder.Services.AddTransient<ICustomersService, CustomerServicecs>();
 builder.Services.AddTransient<IMedicalService, MedicalServices>();
 builder.Services.AddTransient<IBredService, BredServices>();
 builder.Services.AddTransient<IAnimalService, AnimalServices>();
+builder.Services.AddTransient<ISeedService, SeedServices>();
+builder.Services.AddTransient<ICrop, CropServices>();
+
 
 builder.Services.AddTransient<IRefreshHandlercs, RefreshHandler>();
 
