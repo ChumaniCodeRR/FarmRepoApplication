@@ -49,7 +49,7 @@ namespace Application_test_repo.Controllers
         [AllowAnonymous]
         [HttpPost("CreateBred")]
         public async Task<IActionResult> CreateBred(BredModal _data)
-        {
+        { 
             var data = await this.bredService.CreateBred(_data);
             return Ok(data);
         }

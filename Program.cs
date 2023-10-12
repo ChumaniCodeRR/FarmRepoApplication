@@ -28,6 +28,9 @@ builder.Services.AddTransient<IBredService, BredServices>();
 builder.Services.AddTransient<IAnimalService, AnimalServices>();
 builder.Services.AddTransient<ISeedService, SeedServices>();
 builder.Services.AddTransient<ICrop, CropServices>();
+builder.Services.AddTransient<IAgriExpectAdviser, AgriExpectAdviserServices>();
+builder.Services.AddTransient<IFertilizer, FertilizerServices>();
+builder.Services.AddTransient<IWeather, WeatherServices>();
 
 
 builder.Services.AddTransient<IRefreshHandlercs, RefreshHandler>();

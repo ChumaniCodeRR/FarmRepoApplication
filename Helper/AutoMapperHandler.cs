@@ -34,6 +34,19 @@ namespace Application_test_repo.Helper
             CreateMap<TblSeed, SeedModal>()
                 .ForMember(icon => icon.SeedId,
                 opts => opts.MapFrom(src => src.SeedId)).ReverseMap();
+
+            CreateMap<TblAgriExpectAdviser, AgriExpectAdviserModal>()
+                .ForMember(icon => icon.ExpertId,
+                opts => opts.MapFrom(src => src.ExpertId)).ReverseMap();
+
+            CreateMap<TblWeather, WeatherModal>()
+               .ForMember(icon => icon.WeatherId,
+               opts => opts.MapFrom(src => src.WeatherId)).ReverseMap();
+
+            CreateMap<TblFertilizer, FertilizerModal>()
+               .ForMember(icon => icon.FertilizerId,
+               opts => opts.MapFrom(src => src.FertilizerId)).ReverseMap();
+
         }
     }
 }
